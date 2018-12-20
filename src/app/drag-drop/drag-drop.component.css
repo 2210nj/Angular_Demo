@@ -5,6 +5,7 @@
     width: 70%;
     border-radius: 10px;
     padding:10px;
+    max-width: 700px;
 }
 .container.inner{
     height: 100%;
