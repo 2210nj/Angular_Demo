@@ -1,9 +1,9 @@
 import { Directive, ViewContainerRef } from '@angular/core';
 
 @Directive({
-  selector: '[appDragDrop]'
+  selector: '[appHelper]'
 })
-export class DragDropDirective {
+export class HelperDirective {
 
   constructor(public viewContainerRef: ViewContainerRef) { }
 

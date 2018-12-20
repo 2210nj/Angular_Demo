@@ -4,9 +4,8 @@ import { empty } from 'rxjs';
 import { DragDropService } from '../services/drag-drop.service';
 import { Item } from '../item';
 import { TextBoxComponent } from '../text-box/text-box.component';
-
-import { DragDropDirective } from '../directives/drag-drop.directive';
 import { DraggableComponent } from './draggablecomponent';
+import { HelperDirective } from '../directives/helper.directive';
 
 @Component({
   selector: 'app-drag-drop',
@@ -16,7 +15,7 @@ import { DraggableComponent } from './draggablecomponent';
 export class DragDropComponent implements OnInit {
   //@ViewChild(DragDropDirective) dragDropHost: DragDropDirective;
   //@ViewChild(TextBoxDirective) dragdropHost: TextBoxDirective;
-  @ViewChild(DragDropDirective) adHost: DragDropDirective;
+  @ViewChild(HelperDirective) adHost: HelperDirective;
   counter: number = 1;
   draggedItemId: string;
   components: DraggableComponent[];
