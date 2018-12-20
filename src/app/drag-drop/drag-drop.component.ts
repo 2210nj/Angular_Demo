@@ -13,8 +13,6 @@ import { HelperDirective } from '../directives/helper.directive';
   styleUrls: ['./drag-drop.component.css']
 })
 export class DragDropComponent implements OnInit {
-  //@ViewChild(DragDropDirective) dragDropHost: DragDropDirective;
-  //@ViewChild(TextBoxDirective) dragdropHost: TextBoxDirective;
   @ViewChild(HelperDirective) adHost: HelperDirective;
   counter: number = 1;
   draggedItemId: string;
@@ -37,7 +35,7 @@ export class DragDropComponent implements OnInit {
   createComponent(dragItem) {
     let componentFactory = this.componentFactoryResolver.resolveComponentFactory(dragItem.component);
     let viewContainerRef = this.adHost.viewContainerRef;
-    viewContainerRef.clear();
+    //viewContainerRef.clear();
     let componentRef = viewContainerRef.createComponent(componentFactory);
     (<TextBoxComponent>componentRef.instance).data = dragItem.data;
   }
