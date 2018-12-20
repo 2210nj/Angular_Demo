@@ -3,11 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DragDropComponent } from './drag-drop/drag-drop.component';
+import { TextBoxComponent } from './text-box/text-box.component';
+import { ButtonComponent } from './button/button.component';
+import { DragDropDirective } from './directives/drag-drop.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DragDropComponent,
+    TextBoxComponent,
+    ButtonComponent,
+    DragDropDirective,
   ],
+  entryComponents: [ TextBoxComponent, ButtonComponent ],
   imports: [
     BrowserModule,
     AppRoutingModule

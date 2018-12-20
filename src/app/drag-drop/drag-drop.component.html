@@ -1,0 +1,17 @@
+<div class="container main-container row">
+  <div class="container left inner col">
+    <div class="header row">Drop Zone</div>
+    <div id="drop-zone"class="components-body container-drop-zone row" (drop)="drop($event)" (dragover)="allowDrop($event)">
+        <ng-template app-text-box></ng-template>
+    </div>
+  </div>
+  <div class="container right inner col">
+    <div class="header">Drag Items</div>
+    <div class="components-body">
+        <div class="box element" 
+          *ngFor="let component of components">
+          <div class="box component-item" id="{{component.id}}" draggable="true" (dragstart)="drag($event)">{{component.itemName}}</div>
+        </div>
+    </div>
+  </div>
+</div>
