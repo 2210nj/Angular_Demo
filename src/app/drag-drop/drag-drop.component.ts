@@ -38,7 +38,6 @@ export class DragDropComponent implements OnInit {
   createComponent(dragItem) {
     let componentFactory = this.componentFactoryResolver.resolveComponentFactory(dragItem.component);
     let viewContainerRef = this.adHost.viewContainerRef;
-    //viewContainerRef.clear();
     let componentRef = viewContainerRef.createComponent(componentFactory);
     (<DragDropComponent>componentRef.instance).data = dragItem.data;
   }
