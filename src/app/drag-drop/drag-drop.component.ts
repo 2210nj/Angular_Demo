@@ -19,6 +19,7 @@ export class DragDropComponent implements OnInit {
   components: DraggableComponent[];
   items: Item[];
   selectedItem: Item;
+  data: Item;
 
 
   constructor(private componentFactoryResolver: ComponentFactoryResolver, private dragDropService: DragDropService) {
@@ -39,7 +40,7 @@ export class DragDropComponent implements OnInit {
     let viewContainerRef = this.adHost.viewContainerRef;
     //viewContainerRef.clear();
     let componentRef = viewContainerRef.createComponent(componentFactory);
-    (<TextBoxComponent>componentRef.instance).data = dragItem.data;
+    (<DragDropComponent>componentRef.instance).data = dragItem.data;
   }
 
   allowDrop(event) {
